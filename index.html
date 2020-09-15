@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>calculater</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <div class="section-center">
+   <div class="container">
+     <div class="display">
+       <input type="text" id="display-screen" value="0" readonly>
+     </div>
+     <div class="btn-container">
+       <div class="row">
+        <button type="submit" class="num-btn" onclick="addNum(7)">7</button>
+        <button type="submit" class="num-btn"onclick="addNum(8)">8</button>
+        <button type="submit" class="num-btn"onclick="addNum(9)">9</button>
+        <button type="submit" class="btn-warnning"onclick="operate('+')">+</button>
+       </div>
+       <div class="row">
+        <button type="submit" class="num-btn"onclick="addNum(4)">4</button>
+        <button type="submit" class="num-btn"onclick="addNum(5)">5</button>
+        <button type="submit" class="num-btn"onclick="addNum(6)">6</button>
+        <button type="submit" class="btn-warnning"onclick="operate('-')">-</button>
+       </div>
+       <div class="row">
+        <button type="submit" class="num-btn"onclick="addNum(3)">3</button>
+        <button type="submit" class="num-btn"onclick="addNum(2)">2</button>
+        <button type="submit" class="num-btn"onclick="addNum(1)">1</button>
+        <button type="submit" class="btn-warnning"onclick="operate('*')">*</button>
+       </div>
+       <div class="row">
+        <button type="submit" class="btn-danger"onclick="clearBtn()">AC</button>
+        <button type="submit" class="num-btn"onclick="addNum(0)">0</button>  
+        <button type="submit" class="num-btn "onclick="addNum('.')">.</button>  
+        <button type="submit" class="btn-warnning"onclick="operate('/')">/</button>
+       </div>
+       <div class="row">
+        <button type="submit" class="btn-danger"onclick="copy()">MC</button> 
+        <button type="submit" class="btn-danger"onclick="paste()">MP</button> 
+        <button type="submit" class="btn-success equal-btn" onclick="mathEqual()">=</button>  
+       </div>
+       <div class="row">
+         <span id="advanced"> &DownArrowBar; </span>
+       </div>
+     </div>
+   </div>
+   <div class="advanced-operators">
+    <button type="submit" class="btn-warnning"onclick="operate('%')">%</button>
+    <button type="submit" class="btn-warnning"onclick="operate('^')">^</button>
+    <button type="submit" class="btn-warnning"onclick="operate('log')" title="absolute value">log</button>
+   </div>
+  </div>
+
+<script src="./javas.js"></script>
+</body>
+</html>
