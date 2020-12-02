@@ -34,7 +34,7 @@ function operate(mathoperator) {
          displayScreen.value = Math.log2(prevNum);
          break;
       default:
-         displayScreen.value = '0';
+         displayScreen.value = "";
          break;   
    }
 }
@@ -74,17 +74,19 @@ function clearBtn() {
  operator = undefined;
  period = false;
 
- displayScreen.value = "0";
+ displayScreen.value = "";
 }
 function copy() {
   saveValue = displayScreen.value;
- 
 }
 function paste() {
    displayScreen.value += saveValue.toString();
    newNum = saveValue;
 }
 function Del() {
+   // if result exist just return and relax!
+   if(result) return clearBtn();
+
    let curentNum = displayScreen.value;
    const index = curentNum.length -1;
    curentNum = curentNum.slice(0,index);
