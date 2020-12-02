@@ -100,6 +100,4 @@ function Del() {
    }
    
    displayScreen.value = curentNum;
-   console.log('del ->' + curentNum)
-   console.log('del ->' + newNum)
 }

@@ -10,7 +10,6 @@ html, body {
   body {
     background: #333;
     min-height: 100vh;
-    
   }
   .btn-success {
    color:#fff;
@@ -71,18 +70,4 @@ html, body {
     border: none;
     outline: none;
     word-wrap: break-word;
-  }
-  
-  #advanced {
-    display:flex;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .advanced-operators {
-    visibility: hidden;
-    transition: cubic-bezier(0.77, 0, 0.175, 1);
-  }
-  .show-advanced-operators {
-    visibility: visible;
   }
