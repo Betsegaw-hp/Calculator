@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset = "UTF-8">
 <title>calculater</title>
@@ -12,6 +12,12 @@
        <input type="text" id="display-screen" value="0" readonly>
      </div>
      <div class="btn-container">
+      <div class="row">
+        <button type="submit" class="btn-warnning"onclick="operate('%')">%</button>
+        <button type="submit" class="btn-warnning"onclick="operate('^')">X^Y</button>
+        <button type="submit" class="btn-warnning"onclick="operate('log')" title="absolute value">log</button>
+        <button type="submit" class="btn-danger"onclick="Del()" title="Del">Del</button>
+       </div>
        <div class="row">
         <button type="submit" class="num-btn" onclick="addNum(7)">7</button>
         <button type="submit" class="num-btn"onclick="addNum(8)">8</button>
@@ -41,18 +47,11 @@
         <button type="submit" class="btn-danger"onclick="paste()">MP</button> 
         <button type="submit" class="btn-success equal-btn" onclick="mathEqual()">=</button>  
        </div>
-       <div class="row">
-         <span id="advanced"> &DownArrowBar; </span>
-       </div>
      </div>
-   </div>
-   <div class="advanced-operators">
-    <button type="submit" class="btn-warnning"onclick="operate('%')">%</button>
-    <button type="submit" class="btn-warnning"onclick="operate('^')">^</button>
-    <button type="submit" class="btn-warnning"onclick="operate('log')" title="absolute value">log</button>
    </div>
   </div>
 
 <script src="./javas.js"></script>
+<noscript>This app works only by javascript. please enable browser javascript or use an other browser which have javascript enabled.</noscript>
 </body>
 </html>

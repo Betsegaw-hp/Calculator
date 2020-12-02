@@ -2,7 +2,7 @@ const displayScreen = document.querySelector("#display-screen");
 let prevNum ="";
 let newNum = "";
 let result = "";
-let operator = "";
+let operator;
 let saveValue ="";
 let period = false;
 // function
@@ -16,6 +16,7 @@ function addNum(num) {
       } else {
          newNum += num;
       }
+
       displayScreen.value = newNum;
       console.log(newNum);
 }
@@ -27,10 +28,14 @@ function operate(mathoperator) {
    displayScreen.value = "0";
    period = false;
    newNum = "";
+   //  For other operations
    switch (operator) {
       case "log":
-         displayScreen.value = Math.log10(prevNum);
+         displayScreen.value = Math.log2(prevNum);
          break;
+      default:
+         displayScreen.value = '0';
+         break;   
    }
 }
 function mathEqual() {
@@ -66,23 +71,33 @@ function clearBtn() {
  prevNum ="";
  newNum = "";
  result = "";
- operator = "";
+ operator = undefined;
  period = false;
 
  displayScreen.value = "0";
 }
 function copy() {
   saveValue = displayScreen.value;
+ 
 }
 function paste() {
-   displayScreen.value = saveValue;
+   displayScreen.value += saveValue.toString();
    newNum = saveValue;
 }
-const showAdvance = document.querySelector("#advanced");
-showAdvance.addEventListener("click",function() {
-   document.querySelector(".advanced-operators").classList.toggle("show-advanced-operators")
-});
+function Del() {
+   let curentNum = displayScreen.value;
+   const index = curentNum.length -1;
+   curentNum = curentNum.slice(0,index);
+   newNum = newNum.slice(0,index);
 
-
-
-
+   // determine period state
+   if(curentNum.includes(".")) {
+      period = true;
+   } else {
+      period = false;
+   }
+   
+   displayScreen.value = curentNum;
+   console.log('del ->' + curentNum)
+   console.log('del ->' + newNum)
+}
