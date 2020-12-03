@@ -21,11 +21,10 @@ function addNum(num) {
       console.log(newNum);
 }
 function operate(mathoperator) {
-   if(!result) {
+   if(!result && newNum) { 
       prevNum = newNum;
    }
    operator = mathoperator;
-   displayScreen.value = "0";
    period = false;
    newNum = "";
    //  For other operations
@@ -34,7 +33,7 @@ function operate(mathoperator) {
          displayScreen.value = Math.log2(prevNum);
          break;
       default:
-         displayScreen.value = "";
+         displayScreen.value = operator;
          break;   
    }
 }

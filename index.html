@@ -13,9 +13,9 @@
      </div>
      <div class="btn-container">
       <div class="row">
-        <button type="submit" class="btn-warnning"onclick="operate('%')">%</button>
+        <button type="submit" class="btn-warnning"onclick="operate('%')" title="module(reminder) not percentage">%</button>
         <button type="submit" class="btn-warnning"onclick="operate('^')">X^Y</button>
-        <button type="submit" class="btn-warnning"onclick="operate('log')" title="absolute value">log</button>
+        <button type="submit" class="btn-warnning"onclick="operate('log')" title="log with base 10">log</button>
         <button type="submit" class="btn-danger"onclick="Del()" title="Del">Del</button>
        </div>
        <div class="row">
@@ -37,14 +37,14 @@
         <button type="submit" class="btn-warnning"onclick="operate('*')">*</button>
        </div>
        <div class="row">
-        <button type="submit" class="btn-danger"onclick="clearBtn()">AC</button>
+        <button type="submit" class="btn-danger" onclick="clearBtn()" title="clear all">AC</button>
         <button type="submit" class="num-btn"onclick="addNum(0)">0</button>  
         <button type="submit" class="num-btn "onclick="addNum('.')">.</button>  
         <button type="submit" class="btn-warnning"onclick="operate('/')">/</button>
        </div>
        <div class="row">
-        <button type="submit" class="btn-danger"onclick="copy()">MC</button> 
-        <button type="submit" class="btn-danger"onclick="paste()">MP</button> 
+        <button type="submit" class="btn-danger" onclick="copy()" title="memory Copy">MC</button> 
+        <button type="submit" class="btn-danger" onclick="paste()" title="memory Paste">MP</button> 
         <button type="submit" class="btn-success equal-btn" onclick="mathEqual()">=</button>  
        </div>
      </div>
