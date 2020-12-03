@@ -31,6 +31,8 @@ function operate(mathoperator) {
    switch (operator) {
       case "log":
          displayScreen.value = Math.log2(prevNum);
+         result = displayScreen.value;
+         prevNum = result;
          break;
       default:
          displayScreen.value = operator;
