@@ -30,7 +30,7 @@ function operate(mathoperator) {
    //  For other operations
    switch (operator) {
       case "log":
-         displayScreen.value = Math.log2(prevNum);
+         displayScreen.value = Math.log10(prevNum);
          result = displayScreen.value;
          prevNum = result;
          break;
