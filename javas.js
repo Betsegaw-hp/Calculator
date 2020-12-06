@@ -35,7 +35,8 @@ function operate(mathoperator) {
          prevNum = result;
          break;
       default:
-         displayScreen.value = operator;
+         displayScreen.value = "";
+         displayScreen.placeholder = operator;
          break;   
    }
 }
@@ -76,14 +77,16 @@ function clearBtn() {
  period = false;
 
  displayScreen.value = "";
+ displayScreen.placeholder = "0";
 }
 function copy() {
   saveValue = displayScreen.value;
 }
 function paste() {
    displayScreen.value += saveValue.toString();
-   newNum = saveValue;
+   newNum = displayScreen.value;
 }
+
 function Del() {
    // if result exist just return and relax!
    if(result) return clearBtn();
